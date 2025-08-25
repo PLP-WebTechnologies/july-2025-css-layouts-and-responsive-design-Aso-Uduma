@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CleanConnect</title>
+    <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <header id="top" class="fade-in">
+    <h1>Aso Uduma</h1>
+    <p>CleanConnect</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about" class="content fade-in cleanconnect-hero">
+  <h2>About CleanConnect</h2>
+  <p><strong>CleanConnect</strong> is more than a service — it’s a mission to make cleaner, greener living easy and accessible for everyone. We link homes, offices, and communities with eco‑friendly cleaning solutions that protect both your space and the planet.</p>
+
+  <div class="cards">
+    <div class="card fade-in">
+      <h3>🌱 Sustainable Practices</h3>
+      <p>We use non‑toxic, biodegradable products that are safe for your family, pets, and the environment.</p>
+    </div>
+    <div class="card fade-in">
+      <h3>🤝 Trusted Network</h3>
+      <p>Our vetted partners ensure consistent quality and care, whether you’re booking a one‑time service or regular cleanings.</p>
+    </div>
+    <div class="card fade-in">
+      <h3>⚡ Easy Booking</h3>
+      <p>Schedule in minutes via our streamlined platform — pick the time, place, and we’ll handle the rest.</p>
+    </div>
+    <div class="card fade-in">
+      <h3>📍 Local Impact</h3>
+      <p>We prioritize local partnerships to support your community and reduce carbon footprint.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:1rem;">
+    Ready to experience a cleaner, healthier environment?  
+    <a href="#contact" style="color: var(--primary); font-weight: 600;">Get in touch today</a>.
+  </p>
+</section>
+
+    <aside id="services" class="fade-in sidebar-special">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="#booking">Book a Cleaning</a></li>
+    <li><a href="#plans">Service Plans</a></li>
+    <li><a href="#eco-tips">Eco Tips</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+
+  <div class="sidebar-cta">
+    <h4>Get a Free Quote</h4>
+    <p>Tell us about your space and we’ll give you a tailored estimate within 24 hours.</p>
+    <a href="#contact" class="quote-btn">Request Quote</a>
+  </div>
+
+  <div class="eco-tip">
+    <h4>♻ Eco Tip of the Week</h4>
+    <p>Switch to reusable microfiber cloths instead of paper towels — they last for years and reduce waste.</p>
+  </div>
+</aside>
+  </main>
+
+  <footer id="contact" class="fade-in">
+    <p>&copy; 2025 CleanConnect/p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,243 @@
+ :root {
+      --primary: #0d6efd;
+      --accent: #ff7f50;
+      --light: #f9f9fb;
+      --dark: #1f1f1f;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav li {
+      margin: 0.5rem 1rem;
+    }
+
+    nav a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.2s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+.cleanconnect-hero {
+  background: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 249, 251, 0.95)),
+    url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+
+
+    main {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .content, aside {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      flex: 1 1 calc(50% - 0.5rem);
+      background: var(--light);
+      padding: 1rem;
+      border-radius: var(--radius);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sidebar-special {
+  background: #ffffff;
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.sidebar-special h3, 
+.sidebar-special h4 {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-special ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-special ul li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-special ul li a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sidebar-special ul li a:hover {
+  color: var(--accent);
+}
+
+.sidebar-cta {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.quote-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.quote-btn:hover {
+  background: var(--accent);
+}
+
+.eco-tip {
+  background: linear-gradient(135deg, #f0fff7, #f8fff9);
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+    /* Tablet adjustments */
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 2fr 1fr;
+      }
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
